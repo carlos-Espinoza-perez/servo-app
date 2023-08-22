@@ -105,8 +105,15 @@ void calc_move(String message) {
 
 
   switch (n_action) {
-    case 7:
-      break;
+    case 7: return deleteLastMoveSaved();
+    case 8: return saveMovements();
+    case 9: return cancelAutomatization();
+    case 10: return initAutomaization();
+    
+    case 11: return moveForward();
+    case 12: return moveBack();
+    case 13: return moveRight();
+    case 14: return moveLeft();
   }
 }
 
@@ -174,7 +181,6 @@ void moveForward() {
   analogWrite(speedMotor1, 255);
   analogWrite(speedMotor2, 255);
 }
-
 
 // Numero 12 - Mover hacia atras
 void moveBack() {
